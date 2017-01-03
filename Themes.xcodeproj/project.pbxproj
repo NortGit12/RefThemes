@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		1F6DD9AC1E1C129F00AE875E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */; };
 		1F6DD9B11E1C129F00AE875E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6DD9AF1E1C129F00AE875E /* Main.storyboard */; };
-		1F6DD9B31E1C129F00AE875E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6DD9B21E1C129F00AE875E /* Assets.xcassets */; };
 		1F6DD9B61E1C129F00AE875E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6DD9B41E1C129F00AE875E /* LaunchScreen.storyboard */; };
 		1F6DD9C11E1C129F00AE875E /* ThemesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9C01E1C129F00AE875E /* ThemesTests.swift */; };
 		1F6DD9CC1E1C129F00AE875E /* ThemesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9CB1E1C129F00AE875E /* ThemesUITests.swift */; };
+		1F6DD9DA1E1C159000AE875E /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9D91E1C159000AE875E /* OneViewController.swift */; };
+		1F6DD9DC1E1C159500AE875E /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9DB1E1C159500AE875E /* TwoViewController.swift */; };
+		1F6DD9DE1E1C15A000AE875E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9DD1E1C15A000AE875E /* SettingsViewController.swift */; };
+		1F6DD9E31E1C168800AE875E /* OneSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9E21E1C168800AE875E /* OneSubViewController.swift */; };
+		1FE8768B1E1C5D40001F4848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE8768A1E1C5D40001F4848 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 		1F6DD9A81E1C129F00AE875E /* Themes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6DD9B01E1C129F00AE875E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F6DD9B21E1C129F00AE875E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F6DD9B51E1C129F00AE875E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F6DD9B71E1C129F00AE875E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6DD9BC1E1C129F00AE875E /* ThemesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,11 @@
 		1F6DD9C71E1C129F00AE875E /* ThemesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6DD9CB1E1C129F00AE875E /* ThemesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesUITests.swift; sourceTree = "<group>"; };
 		1F6DD9CD1E1C129F00AE875E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6DD9D91E1C159000AE875E /* OneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		1F6DD9DB1E1C159500AE875E /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		1F6DD9DD1E1C15A000AE875E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1F6DD9E21E1C168800AE875E /* OneSubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSubViewController.swift; sourceTree = "<group>"; };
+		1FE8768A1E1C5D40001F4848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */,
-				1F6DD9AF1E1C129F00AE875E /* Main.storyboard */,
-				1F6DD9B21E1C129F00AE875E /* Assets.xcassets */,
-				1F6DD9B41E1C129F00AE875E /* LaunchScreen.storyboard */,
-				1F6DD9B71E1C129F00AE875E /* Info.plist */,
+				1F6DD9E01E1C15BA00AE875E /* Resources */,
+				1F6DD9DF1E1C15A800AE875E /* ViewControllers */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -120,6 +126,36 @@
 				1F6DD9CD1E1C129F00AE875E /* Info.plist */,
 			);
 			path = ThemesUITests;
+			sourceTree = "<group>";
+		};
+		1F6DD9DF1E1C15A800AE875E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F6DD9D91E1C159000AE875E /* OneViewController.swift */,
+				1F6DD9E21E1C168800AE875E /* OneSubViewController.swift */,
+				1F6DD9DB1E1C159500AE875E /* TwoViewController.swift */,
+				1F6DD9DD1E1C15A000AE875E /* SettingsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1F6DD9E01E1C15BA00AE875E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FE8768A1E1C5D40001F4848 /* Assets.xcassets */,
+				1F6DD9B71E1C129F00AE875E /* Info.plist */,
+				1F6DD9E11E1C15C100AE875E /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1F6DD9E11E1C15C100AE875E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1F6DD9B41E1C129F00AE875E /* LaunchScreen.storyboard */,
+				1F6DD9AF1E1C129F00AE875E /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6DD9B61E1C129F00AE875E /* LaunchScreen.storyboard in Resources */,
-				1F6DD9B31E1C129F00AE875E /* Assets.xcassets in Resources */,
+				1FE8768B1E1C5D40001F4848 /* Assets.xcassets in Resources */,
 				1F6DD9B11E1C129F00AE875E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6DD9AC1E1C129F00AE875E /* AppDelegate.swift in Sources */,
+				1F6DD9DA1E1C159000AE875E /* OneViewController.swift in Sources */,
+				1F6DD9DC1E1C159500AE875E /* TwoViewController.swift in Sources */,
+				1F6DD9DE1E1C15A000AE875E /* SettingsViewController.swift in Sources */,
+				1F6DD9E31E1C168800AE875E /* OneSubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +550,7 @@
 				1F6DD9D21E1C129F00AE875E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F6DD9D31E1C129F00AE875E /* Build configuration list for PBXNativeTarget "ThemesTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +559,7 @@
 				1F6DD9D51E1C129F00AE875E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F6DD9D61E1C129F00AE875E /* Build configuration list for PBXNativeTarget "ThemesUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +568,7 @@
 				1F6DD9D81E1C129F00AE875E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
