@@ -161,9 +161,9 @@
                                     <constraint firstAttribute="height" constant="28" id="gtk-aP-fSx"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Normal"/>
                                     <segment title="Dark"/>
                                     <segment title="Graphical"/>
+                                    <segment title="Normal"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
