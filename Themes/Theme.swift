@@ -1,0 +1,54 @@
+//
+//  Theme.swift
+//  Themes
+//
+//  Created by Jeff Norton on 1/4/17.
+//  Copyright © 2017 JeffCryst. All rights reserved.
+//
+
+import Foundation
+
+let SelectedThemeKey = "SelectedTheme"
+
+enum Theme: Int {
+    
+    //==================================================
+    // MARK: - Cases
+    //==================================================
+    
+    case dark, graphical, normal
+    
+    //==================================================
+    // MARK: - Properties
+    //==================================================
+}
+
+struct ThemeManager {
+    
+    //==================================================
+    // MARK: - Methods
+    //==================================================
+    
+    static func applyTheme(_ theme: Theme) {
+        // Save the Theme value in UserDefaults and write the changes
+        UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
+        UserDefaults.standard.synchronize()
+    }
+    
+    static func currentTheme() -> Theme? {
+        // Retrieve the theme value from UserDefaults.  If it succeeds create a new Theme instance.  If it doesn't then return the normal theme.
+        if let storedTheme = (UserDefaults.standard.value(forKey: SelectedThemeKey) as AnyObject).integerValue {
+            NSLog("storedTheme value = >>>\(storedTheme)<<<")
+            
+            guard let theme = Theme(rawValue: storedTheme) else {
+                NSLog("Error creating a Theme from the stored Theme value.")
+                return nil
+            }
+            
+            return theme
+            
+        } else {
+            return .normal
+        }
+    }
+}

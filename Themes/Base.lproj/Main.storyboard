@@ -161,10 +161,13 @@
                                     <constraint firstAttribute="height" constant="28" id="gtk-aP-fSx"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Normal"/>
                                     <segment title="Dark"/>
                                     <segment title="Graphical"/>
+                                    <segment title="Normal"/>
                                 </segments>
+                                <connections>
+                                    <action selector="themeSegmentedControlValueChanged:" destination="xCm-Ac-IM7" eventType="valueChanged" id="8oa-yK-oR5"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>

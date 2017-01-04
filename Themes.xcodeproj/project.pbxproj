@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F4458D61E1D97AE00C5068A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4458D51E1D97AE00C5068A /* Theme.swift */; };
 		1F6DD9AC1E1C129F00AE875E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */; };
 		1F6DD9B11E1C129F00AE875E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6DD9AF1E1C129F00AE875E /* Main.storyboard */; };
 		1F6DD9B61E1C129F00AE875E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6DD9B41E1C129F00AE875E /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F4458D51E1D97AE00C5068A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1F6DD9A81E1C129F00AE875E /* Themes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6DD9B01E1C129F00AE875E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6DD9AB1E1C129F00AE875E /* AppDelegate.swift */,
+				1F4458D51E1D97AE00C5068A /* Theme.swift */,
 				1F6DD9E01E1C15BA00AE875E /* Resources */,
 				1F6DD9DF1E1C15A800AE875E /* ViewControllers */,
 			);
@@ -298,6 +301,7 @@
 				1F6DD9AC1E1C129F00AE875E /* AppDelegate.swift in Sources */,
 				1F6DD9DA1E1C159000AE875E /* OneViewController.swift in Sources */,
 				1F6DD9DC1E1C159500AE875E /* TwoViewController.swift in Sources */,
+				1F4458D61E1D97AE00C5068A /* Theme.swift in Sources */,
 				1F6DD9DE1E1C15A000AE875E /* SettingsViewController.swift in Sources */,
 				1F6DD9E31E1C168800AE875E /* OneSubViewController.swift in Sources */,
 			);
