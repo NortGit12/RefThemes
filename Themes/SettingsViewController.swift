@@ -11,14 +11,19 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     //==================================================
+    // MARK: - _Properties
+    //==================================================
+    
+    @IBOutlet weak var themeSegmentedControl: UISegmentedControl!
+    
+    //==================================================
     // MARK: - Actions
     //==================================================
     
     @IBAction func themeSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         
-        if let newThemeValue = Theme(rawValue: sender.selectedSegmentIndex) {
-            NSLog("newThemeValue = \(newThemeValue)")
-            ThemeManager.applyTheme(newThemeValue)
+        if let newTheme = Theme(rawValue: sender.selectedSegmentIndex) {
+            ThemeManager.applyTheme(newTheme)
         }
     }
     
@@ -35,5 +40,12 @@ class SettingsViewController: UIViewController {
         titleImageView.contentMode = UIViewContentMode.scaleAspectFit
         
         navigationItem.titleView = titleImageView
+        
+        // Select the stored theme value in the Segmented Control
+        guard let currentTheme = ThemeManager.currentTheme() else {
+            NSLog("Error getting the current theme's raw value for selecting the Theme Segmented Control's selected index.")
+            return
+        }
+        themeSegmentedControl.selectedSegmentIndex = currentTheme.rawValue
     }
 }
