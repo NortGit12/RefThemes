@@ -6,7 +6,7 @@
 //  Copyright © 2017 JeffCryst. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let SelectedThemeKey = "SelectedTheme"
 
@@ -21,6 +21,27 @@ enum Theme: Int {
     //==================================================
     // MARK: - Properties
     //==================================================
+    
+    /* Consumers
+     *UINavigation appearance's bar style
+     */
+    var barStyle: UIBarStyle {
+        switch self {
+        case .dark:
+            return .black
+        case .graphical:
+            return .default
+        case .normal:
+            return .default
+        }
+    }
+    
+    /* Consumers
+     *UINavigation appearance's background image
+     */
+    var navigationBackgroundImage: UIImage? {
+        return self == .graphical ? UIImage(named: "navBarBackground") : nil
+    }
 }
 
 struct ThemeManager {
@@ -33,6 +54,10 @@ struct ThemeManager {
         // Save the Theme value in UserDefaults and write the changes
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
+        
+        // Set the Navigation Bar's bar style and background image
+        UINavigationBar.appearance().barStyle = theme.barStyle
+        UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
     }
     
     static func currentTheme() -> Theme? {

@@ -181,6 +181,9 @@
                     <navigationItem key="navigationItem" id="wSr-jD-Idt">
                         <barButtonItem key="leftBarButtonItem" title="Greeting" id="XWQ-Zh-IC6"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="themeSegmentedControl" destination="kRK-o0-wjX" id="jMb-i2-ywu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYS-cr-BwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
