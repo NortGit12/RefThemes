@@ -6,7 +6,7 @@
 //  Copyright © 2017 JeffCryst. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let SelectedThemeKey = "SelectedTheme"
 
@@ -29,6 +29,10 @@ struct ThemeManager {
         // Save the Theme value in UserDefaults and write the changes
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
+        
+        // Customize the Navigation Bar's back indicator
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
     }
     
     static func currentTheme() -> Theme? {
