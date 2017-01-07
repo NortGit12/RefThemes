@@ -24,6 +24,21 @@ class SettingsViewController: UIViewController {
         
         if let newTheme = Theme(rawValue: sender.selectedSegmentIndex) {
             ThemeManager.applyTheme(newTheme)
+            
+            /*
+             Manually update the Navigation bar to modify this in-place.  ThemeManager.applyTheme() will
+             take care of changing all future views.
+             */
+            self.navigationController?.navigationBar.barStyle = (ThemeManager.currentTheme()?.barStyle)!
+            self.navigationController?.navigationBar.setBackgroundImage(newTheme.navigationBackgroundImage, for: .default)
+            
+            // Attempting to manually update the UITabBar
+//            self.navigationController?.parent?.tabBarController?.tabBar.barStyle = newTheme.barStyle
+//            self.navigationController?.parent?.tabBarController?.tabBar.backgroundImage = newTheme.tabBarBackgroundImage
+            
+//            self.navigationController?.parent?.tabBarController?
+            
+            
         }
     }
     

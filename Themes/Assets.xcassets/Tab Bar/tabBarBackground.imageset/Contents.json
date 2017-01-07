@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tabbar-background_waves.png",
+      "filename" : "tabBarBackground.png",
       "scale" : "1x"
     },
     {
