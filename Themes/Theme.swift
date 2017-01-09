@@ -6,7 +6,7 @@
 //  Copyright © 2017 JeffCryst. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let SelectedThemeKey = "SelectedTheme"
 
@@ -29,6 +29,17 @@ struct ThemeManager {
         // Save the Theme value in UserDefaults and write the changes
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
+        
+        // Customize the slider
+        UISlider.appearance()
+            .setThumbImage(UIImage(named: "seashell_pt30x1"), for: .normal)
+        UISlider.appearance()
+            .setMinimumTrackImage(UIImage(named: "minimumTrack")?
+                .withRenderingMode(.alwaysTemplate)
+                .resizableImage(withCapInsets: UIEdgeInsets(top: 0.0, left: 6.0, bottom: 0.0, right: 0.0)), for: .normal)
+        UISlider.appearance()
+            .setMaximumTrackImage(UIImage(named: "maximumTrack")?
+                .resizableImage(withCapInsets: UIEdgeInsets(top: 0.0, left: 6.0, bottom: 0.0, right: 6.0)), for: .normal)
     }
     
     static func currentTheme() -> Theme? {
