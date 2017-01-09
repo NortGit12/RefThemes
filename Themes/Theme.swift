@@ -36,29 +36,6 @@ enum Theme: Int {
     
     /*
      Consumers:
-     *UIApplication delegate window's tint color
-     */
-    var mainColor: UIColor {
-        switch self {
-        case .normal:
-            return UIColor(red: 87/255.0, green: 188/255.0, blue: 95/255.0, alpha: 1.0)   // light green 
-        case .dark:
-            return UIColor(red: 242/255.0, green: 101/255.0, blue: 34/255.0, alpha: 1.0)  // orange
-        case .graphical:
-            return UIColor(red: 10/255.0, green: 10/255.0, blue: 10/255.0, alpha: 1.0)    // black 
-        }
-    }
-    
-    /*
-     Consumers:
-     *UINavigation appearance's background image
-     */
-    var navigationBackgroundImage: UIImage? {
-        return self == .graphical ? UIImage(named: "navBarBackground") : nil
-    }
-    
-    /*
-     Consumers:
      *UITabBar appearance's background image
      */
      var tabBarBackgroundImage: UIImage? {
@@ -76,18 +53,6 @@ struct ThemeManager {
         // Save the Theme value in UserDefaults and write the changes
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
-        
-        // Change the tint color
-        let shared = UIApplication.shared
-        shared.delegate?.window??.tintColor = theme.mainColor
-        
-        // Set the Navigation Bar's bar style
-        UINavigationBar.appearance().barStyle = theme.barStyle
-        UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
-        
-        // Customize the Navigation Bar's back indicator
-        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
         
         // Set the Tab Bar's bar style
         // This is handled in the Theme Segmented Control's value changed method because it has access to the current tabBarController

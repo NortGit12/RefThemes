@@ -26,13 +26,6 @@ class SettingsViewController: UIViewController {
             ThemeManager.applyTheme(newTheme)
             
             /*
-             Manually update the Navigation bar to modify this in-place.  ThemeManager.applyTheme() will
-             take care of changing all future views.
-             */
-            self.navigationController?.navigationBar.barStyle = (ThemeManager.currentTheme()?.barStyle)!
-            self.navigationController?.navigationBar.setBackgroundImage(newTheme.navigationBackgroundImage, for: .default)
-            
-            /*
             Manually update the UITabBar here, instead of in ThemeManager.applyTheme(), because it has access to the current tabBarController
              */
             self.tabBarController?.tabBar.barStyle = newTheme.barStyle
