@@ -6,7 +6,7 @@
 //  Copyright © 2017 JeffCryst. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let SelectedThemeKey = "SelectedTheme"
 
@@ -29,6 +29,16 @@ struct ThemeManager {
         // Save the Theme value in UserDefaults and write the changes
         UserDefaults.standard.setValue(theme.rawValue, forKey: SelectedThemeKey)
         UserDefaults.standard.synchronize()
+        
+        // Customize the stepper
+        let controlBackground = UIImage(named: "controlBackground")?.withRenderingMode(.alwaysTemplate).resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
+        
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .normal)
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .disabled)
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .highlighted)
+        
+        UIStepper.appearance().setDecrementImage(UIImage(named: "sunOne_s18x1"), for: .normal)
+        UIStepper.appearance().setIncrementImage(UIImage(named: "sunThree_s18x1"), for: .normal)
     }
     
     static func currentTheme() -> Theme? {
