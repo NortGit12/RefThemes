@@ -32,13 +32,9 @@ class SettingsViewController: UIViewController {
             self.navigationController?.navigationBar.barStyle = (ThemeManager.currentTheme()?.barStyle)!
             self.navigationController?.navigationBar.setBackgroundImage(newTheme.navigationBackgroundImage, for: .default)
             
-            // Attempting to manually update the UITabBar
-//            self.navigationController?.parent?.tabBarController?.tabBar.barStyle = newTheme.barStyle
-//            self.navigationController?.parent?.tabBarController?.tabBar.backgroundImage = newTheme.tabBarBackgroundImage
-            
-//            self.navigationController?.parent?.tabBarController?
-            
-            
+            // Manually update the UITabBar
+            self.tabBarController?.tabBar.barStyle = newTheme.barStyle
+            self.tabBarController?.tabBar.backgroundImage = newTheme.tabBarBackgroundImage
         }
     }
     
