@@ -90,8 +90,7 @@ struct ThemeManager {
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
         
         // Set the Tab Bar's bar style
-        UITabBar.appearance().barStyle = theme.barStyle
-        UITabBar.appearance().backgroundImage = theme.tabBarBackgroundImage
+        // This is set in the Theme Segmented Control's value changed method (because it has access to the current tabBarController
     }
     
     static func currentTheme() -> Theme? {
