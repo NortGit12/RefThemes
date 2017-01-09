@@ -31,6 +31,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0tK-JH-pxy">
                                 <rect key="frame" x="88" y="84" width="200" height="29"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1xT-t8-aCz"/>
                                     <constraint firstAttribute="width" constant="200" id="D4y-8p-uNy"/>
                                 </constraints>
                                 <segments>
@@ -154,7 +155,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kRK-o0-wjX">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kRK-o0-wjX">
                                 <rect key="frame" x="84" y="90" width="240" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="dIC-ea-Dr1"/>
