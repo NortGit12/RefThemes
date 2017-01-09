@@ -28,25 +28,25 @@
                                     <segue destination="5ze-uF-dvZ" kind="show" id="3BH-6i-faX"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0tK-JH-pxy">
-                                <rect key="frame" x="88" y="84" width="200" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0tK-JH-pxy">
+                                <rect key="frame" x="128" y="84" width="120" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="D4y-8p-uNy"/>
+                                    <constraint firstAttribute="height" constant="50" id="9Yn-Ea-8WO"/>
+                                    <constraint firstAttribute="width" constant="120" id="D4y-8p-uNy"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="Cat"/>
+                                    <segment title="Dog"/>
                                 </segments>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-k9-Hnd">
-                                <rect key="frame" x="20" y="132" width="335" height="30"/>
+                                <rect key="frame" x="20" y="154" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38V-Fu-Une">
-                                <rect key="frame" x="106" y="182" width="164" height="29"/>
+                                <rect key="frame" x="106" y="204" width="164" height="29"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-iR-1ux">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
@@ -72,10 +72,10 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="py5-DW-reH">
-                                <rect key="frame" x="48" y="231" width="279" height="31"/>
+                                <rect key="frame" x="48" y="253" width="279" height="31"/>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5W-uY-dZ7">
-                                <rect key="frame" x="163" y="281" width="51" height="31"/>
+                                <rect key="frame" x="163" y="303" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,6 +101,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="h6e-ud-gsk"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="animalTypeSegmentedControl" destination="0tK-JH-pxy" id="xDo-tp-Ktu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfS-ez-XjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
