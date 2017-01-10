@@ -40,14 +40,8 @@
                                     <segment title="Third"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNN-k9-Hnd">
-                                <rect key="frame" x="20" y="132" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38V-Fu-Une">
-                                <rect key="frame" x="106" y="182" width="164" height="29"/>
+                                <rect key="frame" x="106" y="132" width="164" height="29"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dX1-iR-1ux">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
@@ -73,29 +67,25 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="py5-DW-reH">
-                                <rect key="frame" x="48" y="231" width="279" height="31"/>
+                                <rect key="frame" x="48" y="181" width="279" height="31"/>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5W-uY-dZ7">
-                                <rect key="frame" x="163" y="281" width="51" height="31"/>
+                                <rect key="frame" x="163" y="231" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VNN-k9-Hnd" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="379-61-tVU"/>
                             <constraint firstItem="zQd-AP-gKn" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="6qo-6B-pSK"/>
                             <constraint firstItem="0tK-JH-pxy" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="AAq-gx-5Lv"/>
-                            <constraint firstAttribute="trailing" secondItem="VNN-k9-Hnd" secondAttribute="trailing" constant="20" id="APU-32-eLe"/>
                             <constraint firstItem="h7d-W0-xuG" firstAttribute="top" secondItem="zQd-AP-gKn" secondAttribute="bottom" constant="50" id="CnQ-ra-v80"/>
                             <constraint firstItem="y5W-uY-dZ7" firstAttribute="top" secondItem="py5-DW-reH" secondAttribute="bottom" constant="20" id="GHs-9U-tHz"/>
                             <constraint firstItem="py5-DW-reH" firstAttribute="top" secondItem="38V-Fu-Une" secondAttribute="bottom" constant="20" id="P7n-ly-zJ0"/>
+                            <constraint firstItem="38V-Fu-Une" firstAttribute="top" secondItem="0tK-JH-pxy" secondAttribute="bottom" constant="20" id="QbH-Gl-vaD"/>
                             <constraint firstAttribute="trailing" secondItem="py5-DW-reH" secondAttribute="trailing" constant="50" id="RNb-kj-Wh3"/>
                             <constraint firstItem="38V-Fu-Une" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="X5i-SQ-FST"/>
-                            <constraint firstItem="38V-Fu-Une" firstAttribute="top" secondItem="VNN-k9-Hnd" secondAttribute="bottom" constant="20" id="cTg-7G-q39"/>
                             <constraint firstItem="0tK-JH-pxy" firstAttribute="top" secondItem="cyo-Ou-thu" secondAttribute="bottom" constant="20" id="gnm-gq-jfO"/>
                             <constraint firstItem="y5W-uY-dZ7" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="iXS-1R-Hzk"/>
-                            <constraint firstItem="VNN-k9-Hnd" firstAttribute="leading" secondItem="eVq-qR-phe" secondAttribute="leading" constant="20" id="nbg-vy-dt1"/>
                             <constraint firstItem="py5-DW-reH" firstAttribute="centerX" secondItem="eVq-qR-phe" secondAttribute="centerX" id="s8K-DB-cIl"/>
-                            <constraint firstItem="VNN-k9-Hnd" firstAttribute="top" secondItem="0tK-JH-pxy" secondAttribute="bottom" constant="20" id="uls-ff-43g"/>
                             <constraint firstItem="py5-DW-reH" firstAttribute="leading" secondItem="eVq-qR-phe" secondAttribute="leading" constant="50" id="zJX-2n-GO5"/>
                         </constraints>
                     </view>
