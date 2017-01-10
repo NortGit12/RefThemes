@@ -46,6 +46,12 @@ enum Theme: Int {
 struct ThemeManager {
     
     //==================================================
+    // MARK: - _Properties
+    //==================================================
+    
+    static var tabBarController: UITabBarController?
+    
+    //==================================================
     // MARK: - Methods
     //==================================================
     
@@ -55,7 +61,12 @@ struct ThemeManager {
         UserDefaults.standard.synchronize()
         
         // Set the Tab Bar's bar style
-        // This is handled in the Theme Segmented Control's value changed method because it has access to the current tabBarController
+        if let tabBarController = tabBarController {
+            tabBarController.tabBar
+                .barStyle = theme.barStyle
+            tabBarController.tabBar
+                .backgroundImage = theme.tabBarBackgroundImage
+        }
     }
     
     static func currentTheme() -> Theme? {

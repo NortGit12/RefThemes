@@ -26,7 +26,7 @@ class SettingsViewController: UIViewController {
             ThemeManager.applyTheme(newTheme)
             
             /*
-            Manually update the UITabBar here, instead of in ThemeManager.applyTheme(), because it has access to the current tabBarController
+            Manually update the UITabBar
              */
             self.tabBarController?.tabBar.barStyle = newTheme.barStyle
             self.tabBarController?.tabBar.backgroundImage = newTheme.tabBarBackgroundImage
