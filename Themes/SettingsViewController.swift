@@ -17,7 +17,6 @@ class SettingsViewController: UIViewController {
     @IBAction func themeSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         
         if let newThemeValue = Theme(rawValue: sender.selectedSegmentIndex) {
-            NSLog("newThemeValue = \(newThemeValue)")
             ThemeManager.applyTheme(newThemeValue)
         }
     }

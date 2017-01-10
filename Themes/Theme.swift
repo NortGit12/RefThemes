@@ -19,7 +19,7 @@ enum Theme: Int {
     case dark, graphical, normal
     
     //==================================================
-    // MARK: - Properties
+    // MARK: - Computed Properties
     //==================================================
     
     /* Consumers
@@ -55,8 +55,6 @@ struct ThemeManager {
     static func currentTheme() -> Theme? {
         // Retrieve the theme value from UserDefaults.  If it succeeds create a new Theme instance.  If it doesn't then return the normal theme.
         if let storedTheme = (UserDefaults.standard.value(forKey: SelectedThemeKey) as AnyObject).integerValue {
-            NSLog("storedTheme value = >>>\(storedTheme)<<<")
-            
             guard let theme = Theme(rawValue: storedTheme) else {
                 NSLog("Error creating a Theme from the stored Theme value.")
                 return nil
