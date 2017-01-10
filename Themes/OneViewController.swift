@@ -9,6 +9,10 @@
 import UIKit
 
 class OneViewController: UIViewController {
+    
+    //==================================================
+    // MARK: - View Lifecycle
+    //==================================================
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,6 @@ class OneViewController: UIViewController {
             NSLog("Error identifying the stored theme.")
             return
         }
-        
         ThemeManager.applyTheme(currentTheme)
     }
 }

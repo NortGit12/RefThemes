@@ -40,6 +40,10 @@ enum Theme: Int {
 
 struct ThemeManager {
     
+    //==================================================
+    // MARK: - _Properties
+    //==================================================
+    
     static var tabBarController: UITabBarController?
     
     //==================================================
