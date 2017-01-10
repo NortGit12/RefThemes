@@ -50,10 +50,8 @@ struct ThemeManager {
         UserDefaults.standard.synchronize()
         
         // Customize the switch
-        UISwitch.appearance()
-            .onTintColor = theme.mainColor.withAlphaComponent(0.3)
-        UISwitch.appearance()
-            .thumbTintColor = theme.mainColor
+        UISwitch.appearance().onTintColor = theme.mainColor.withAlphaComponent(0.3)
+        UISwitch.appearance().thumbTintColor = theme.mainColor
     }
     
     static func currentTheme() -> Theme? {
