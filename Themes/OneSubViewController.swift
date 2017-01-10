@@ -10,11 +10,4 @@ import UIKit
 
 class OneSubViewController: UIViewController {
     
-    //==================================================
-    // MARK: - View Lifecycle
-    //==================================================
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
 }

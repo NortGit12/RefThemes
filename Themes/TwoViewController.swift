@@ -10,13 +10,4 @@ import UIKit
 
 class TwoViewController: UIViewController {
 
-    //==================================================
-    // MARK: - View Lifecycle
-    //==================================================
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
 }
