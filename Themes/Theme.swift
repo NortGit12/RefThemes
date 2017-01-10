@@ -86,16 +86,12 @@ struct ThemeManager {
         UIApplication.shared.delegate?.window??.tintColor = theme.mainColor
         
         // Set the Navigation Bar's bar style and background image
-        UINavigationBar.appearance()
-            .barStyle = theme.barStyle
-        UINavigationBar.appearance()
-            .setBackgroundImage(theme.navigationBackgroundImage, for: .default)
+        UINavigationBar.appearance().barStyle = theme.barStyle
+        UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
         
         // Customize the Navigation Bar's back indicator
-        UINavigationBar.appearance()
-            .backIndicatorImage = UIImage(named: "backArrow")
-        UINavigationBar.appearance()
-            .backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
         
         // Set the Tab Bar's bar style
         if let tabBarController = tabBarController {
@@ -118,31 +114,23 @@ struct ThemeManager {
             .withRenderingMode(.alwaysTemplate)
             .resizableImage(withCapInsets: UIEdgeInsets(top: 3.0, left: 3.0, bottom: 3.0, right: 3.0))
         
-        UISegmentedControl.appearance()
-            .setBackgroundImage(controlBackgroundRegular, for: .normal, barMetrics: .default)
-        UISegmentedControl.appearance()
-            .setBackgroundImage(controlBackgroundSelected, for: .selected, barMetrics: .default)
+        UISegmentedControl.appearance().setBackgroundImage(controlBackgroundRegular, for: .normal, barMetrics: .default)
+        UISegmentedControl.appearance().setBackgroundImage(controlBackgroundSelected, for: .selected, barMetrics: .default)
         
         // Customize the stepper
         let controlBackground = UIImage(named: "controlBackground")?
             .withRenderingMode(.alwaysTemplate)
             .resizableImage(withCapInsets: UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3))
         
-        UIStepper.appearance()
-            .setBackgroundImage(controlBackground, for: .normal)
-        UIStepper.appearance()
-            .setBackgroundImage(controlBackground, for: .disabled)
-        UIStepper.appearance()
-            .setBackgroundImage(controlBackground, for: .highlighted)
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .normal)
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .disabled)
+        UIStepper.appearance().setBackgroundImage(controlBackground, for: .highlighted)
         
-        UIStepper.appearance()
-            .setDecrementImage(UIImage(named: "sunOne_s18x1"), for: .normal)
-        UIStepper.appearance()
-            .setIncrementImage(UIImage(named: "sunThree_s18x1"), for: .normal)
+        UIStepper.appearance().setDecrementImage(UIImage(named: "sunOne_s18x1"), for: .normal)
+        UIStepper.appearance().setIncrementImage(UIImage(named: "sunThree_s18x1"), for: .normal)
         
         // Customize the slider
-        UISlider.appearance()
-            .setThumbImage(UIImage(named: "seashell_pt30x1"), for: .normal)
+        UISlider.appearance().setThumbImage(UIImage(named: "seashell_pt30x1"), for: .normal)
         UISlider.appearance()
             .setMinimumTrackImage(UIImage(named: "minimumTrack")?
                 .withRenderingMode(.alwaysTemplate)
@@ -152,10 +140,8 @@ struct ThemeManager {
                 .resizableImage(withCapInsets: UIEdgeInsets(top: 0.0, left: 6.0, bottom: 0.0, right: 6.0)), for: .normal)
         
         // Customize the switch
-        UISwitch.appearance()
-            .onTintColor = theme.mainColor.withAlphaComponent(0.3)
-        UISwitch.appearance()
-            .thumbTintColor = theme.mainColor
+        UISwitch.appearance().onTintColor = theme.mainColor.withAlphaComponent(0.3)
+        UISwitch.appearance().thumbTintColor = theme.mainColor
     }
     
     static func currentTheme() -> Theme? {
