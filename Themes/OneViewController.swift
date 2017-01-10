@@ -9,7 +9,26 @@
 import UIKit
 
 class OneViewController: UIViewController {
+    
+    //==================================================
+    // MARK: - _Properties
+    //==================================================
+    
+    @IBOutlet weak var animalTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var counterLabel: UILabel!
+    
+    //==================================================
+    // MARK: - Actions
+    //==================================================
+    
+    @IBAction func counterValueChanged(_ sender: UIStepper) {
+        counterLabel.text = "\(Int(sender.value))"
+    }
 
+    //==================================================
+    // MARK: - View Lifecycle
+    //==================================================
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,22 +38,19 @@ class OneViewController: UIViewController {
         titleImageView.contentMode = UIViewContentMode.scaleAspectFit
         
         navigationItem.titleView = titleImageView
+        
+        animalTypeSegmentedControl.setImage(UIImage(named: "cat")?
+            .withRenderingMode(.alwaysTemplate), forSegmentAt: 0)
+        animalTypeSegmentedControl.setImage(UIImage(named: "dog")?
+            .withRenderingMode(.alwaysTemplate), forSegmentAt: 1)
+        
+        ThemeManager.tabBarController = self.tabBarController
+        
+        // Retrieve the stored theme and apply it
+        guard let currentTheme = ThemeManager.currentTheme() else {
+            NSLog("Error identifying the stored theme.")
+            return
+        }
+        ThemeManager.applyTheme(currentTheme)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

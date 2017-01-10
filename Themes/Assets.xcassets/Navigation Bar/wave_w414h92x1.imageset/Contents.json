@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "wave_w414h92x1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "navBackground.png",
       "scale" : "2x"
     },
     {

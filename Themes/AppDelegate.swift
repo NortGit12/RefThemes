@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    //==================================================
+    // MARK: - Methods
+    //==================================================
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -21,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Error identifying the stored theme.")
             return false
         }
-        
         ThemeManager.applyTheme(storedTheme)
         
         return true
