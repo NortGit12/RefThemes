@@ -31,8 +31,7 @@ struct ThemeManager {
         UserDefaults.standard.synchronize()
         
         // Customize the slider
-        UISlider.appearance()
-            .setThumbImage(UIImage(named: "seashell_pt30x1"), for: .normal)
+        UISlider.appearance().setThumbImage(UIImage(named: "seashell_pt30x1"), for: .normal)
         UISlider.appearance()
             .setMinimumTrackImage(UIImage(named: "minimumTrack")?
                 .withRenderingMode(.alwaysTemplate)
